@@ -6,7 +6,7 @@ import {getStoryInfo} from '../../Services/api';
 
 export default class ItemCard extends Component {
   goToDetail = async () => {
-    const result = await getStoryInfo('tien-nghich');
+    const result = await getStoryInfo('tien-hiep');
     console.log(result);
   }
 

@@ -1,0 +1,1 @@
+module.exports = 'https://192.168.222.2:8000/getStoryInfo';

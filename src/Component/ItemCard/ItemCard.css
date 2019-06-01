@@ -1,5 +1,5 @@
 .Card-container {
-  min-width: 25vh;
+  min-width: 23vh;
   height: 30vh;
   display: flex;
   flex-direction: column;
@@ -7,10 +7,10 @@
   background-color: brown;
   border-radius: 8px;
   border-width: 0px;
-  margin: 15px;
+  margin: 10px;
   padding: 0px;
-  box-sizing: border-box;
   overflow: hidden;
+  box-sizing: border-box;
   box-shadow: 2px 2px 25px 0px;
 }
 .Card-container:hover {
@@ -18,18 +18,25 @@
   background-color: pink;
 }
 .Card-footer {
-  min-width: 25vh;
-  padding: 10px;
+  padding: 10px 0px; 
   display: flex;
   flex-direction: column;
   background-color: gray;
   justify-content: center;
-  /* align-items: center; */
+  align-items: flex-start;
 }
-.Name {
-  color: black;
-  font-size: 14;
+.Title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+  width: 23vh;
+  padding: 3px;
 }
-.Age {
-  font-size: 14;
+.Author {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 23vh;
+  padding: 3px;
 }

@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import './ItemCard.css';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
-import {getStoryInfo} from '../../Services/api';
+import { getStoryInfo } from '../../Services/api';
+// import { url } from 'inspector';
 
 export default class ItemCard extends Component {
   goToDetail = async () => {
-    const result = await getStoryInfo('tien-hiep');
-    console.log(result);
+    alert('hmmm');
   }
 
   render() {
     return (
-      <button className="Card-container" onClick={this.goToDetail}>
+      <button className="Card-container"
+        onClick={this.goToDetail}
+        style={{ background: url(this.props.poster) }}>
         <div className="Card-footer">
-          <Typography className="Name" color="textPrimary">
-            {this.props.name}
-          </Typography>
-          <Typography className="Age" color="textPrimary">
-            {this.props.age}
-          </Typography>
+          <div className="Title">
+            {this.props.title}
+          </div>
+          <div className="Author">
+            {this.props.author}
+          </div>
         </div>
       </button>
     );
@@ -27,9 +28,8 @@ export default class ItemCard extends Component {
 }
 
 ItemCard.propTypes = {
-  name: PropTypes.string,
-  age: PropTypes.number,
-  // title: PropTypes.string,
-  // author: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  poster: PropTypes.string,
   // latestChap: PropTypes.number,
 }

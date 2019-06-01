@@ -10,7 +10,7 @@ export default class ListItem extends Component {
       <div className="root">
         <GridList className="List-container" cellHeight={10}>
           {this.props.dataList.map((result) => {
-            return (<ItemCard title={result.title} author={result.author} />)
+            return (<ItemCard title={result.title} author={result.author} poster={result.poster} />)
           })}
         </GridList>
       </div>

@@ -5,9 +5,10 @@
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
-  background-color: aquamarine;
 }
 .List-container{
-  background-color: azure;
-
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

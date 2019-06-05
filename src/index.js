@@ -5,10 +5,12 @@ import './index.css';
 import Home from './Screen/Home/Home';
 import * as serviceWorker from './serviceWorker';
 import {Router, Route, browserHistory} from 'react-router';
+import StoryDetail from './Screen/StoryDetail/StoryDetail';
 
 render(
   <Router history={browserHistory}>
     <Route path="/" component={Home}/>
+    <Route path="/StoryDetail" component={StoryDetail}/>
   </Router>
 , document.getElementById('root'))
 

@@ -8,9 +8,17 @@ export default class ListItem extends Component {
   render() {
     return (
       <div className="root">
-        <GridList className="List-container" cellHeight={10}>
+        <GridList className="list-container" cellHeight={10}>
           {this.props.dataList.map((result) => {
-            return (<ItemCard title={result.title} author={result.author} poster={result.poster} />)
+            return (<ItemCard
+              key={result._id}
+              title={result.title}
+              author={result.author}
+              poster={result.poster}
+              description={result.description}
+              status={result.status}
+              categoryList={result.categoryList}
+            />)
           })}
         </GridList>
       </div>

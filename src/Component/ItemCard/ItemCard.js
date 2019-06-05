@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './ItemCard.css';
 import PropTypes from 'prop-types';
 import { getStoryInfo } from '../../Services/api';
-// import { url } from 'inspector';
 
 export default class ItemCard extends Component {
   goToDetail = async () => {
@@ -13,7 +12,7 @@ export default class ItemCard extends Component {
     return (
       <button className="Card-container"
         onClick={this.goToDetail}
-        style={{ background: url(this.props.poster) }}>
+        style={{ backgroundImage: `url(${this.props.poster})` }}>
         <div className="Card-footer">
           <div className="Title">
             {this.props.title}
